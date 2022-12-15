@@ -1,6 +1,18 @@
 
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+
 .grid-block {
     background-color: black;
-    width: 25px;
-    height: 25px;
+    border-color: aqua;
+    border-width: 1px;
+    border-style: solid;
+    width: 23px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
 }
