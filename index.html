@@ -9,7 +9,12 @@
     <script src="code.js" defer></script>
 </head>
 <body>
-    <button id="grid-size-btn">Change Grid Size</button>
+    <div id="controls-container">
+        <button id="grid-size-btn">Change Grid Size</button>
+        <div class="sldiecontainer">
+            <input type="range" min="1" max="100" value="16" class="slider">
+        </div>
+    </div>
     <div id="grid-container"></div>
     
 </body>
