@@ -1,4 +1,8 @@
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 function createGrid(size) {
     let gridContainer = document.querySelector("#grid-container");
 
@@ -17,11 +21,19 @@ function createGrid(size) {
 
     let blockElements = document.querySelectorAll(".grid-block");
     blockElements.forEach(block => {
-        block.addEventListener("mouseover", () => block.style.backgroundColor = "white");
+        block.addEventListener("mouseover", () => {
+            if(mouseDown) {block.style.backgroundColor = "white"}
+        });
     });
 
 }
 
+
 createGrid(16);
-slider = document.querySelector(".slider");
-slider.addEventListener("change", () => createGrid(slider.value));
+slider = document.querySelector("#slider");
+sliderCount = document.querySelector("#slider-count");
+sliderCount.innerText = `${slider.value} X ${slider.value}`;
+slider.addEventListener("change", () => {
+    createGrid(slider.value);
+    sliderCount.innerText = `${slider.value} X ${slider.value}`;
+});
