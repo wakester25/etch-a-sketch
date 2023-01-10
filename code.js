@@ -46,6 +46,13 @@ function createGrid(size) {
 
 }
 
+function clearGrid() {
+    let blockElements = document.querySelectorAll(".grid-block");
+    blockElements.forEach(block => {
+        block.style.backgroundColor = "black";
+    });
+}
+
 createGrid(16);
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
@@ -57,3 +64,6 @@ slider.addEventListener("input", () => {
 
 rainbowBtn = document.querySelector("#rainbow-btn");
 rainbowBtn.addEventListener("click", createRainbowBlockEvent);
+
+clearBtn = document.querySelector("#clear-btn");
+clearBtn.addEventListener("click", clearGrid);
