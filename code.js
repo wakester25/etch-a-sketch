@@ -1,7 +1,8 @@
 
 let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+
+document.body.addEventListener("mousedown", () => mouseDown = true);
+document.body.addEventListener("mouseup", () => mouseDown = false);
 
 function createColorBlockEvent(color) {
     let blockElements = document.querySelectorAll(".grid-block");
@@ -49,9 +50,10 @@ createGrid(16);
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
 sliderCount.innerText = `${slider.value} X ${slider.value}`;
-slider.addEventListener("change", () => {
+slider.addEventListener("input", () => {
     createGrid(slider.value);
     sliderCount.innerText = `${slider.value} X ${slider.value}`;
 });
+
 rainbowBtn = document.querySelector("#rainbow-btn");
 rainbowBtn.addEventListener("click", createRainbowBlockEvent);
