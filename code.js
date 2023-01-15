@@ -1,6 +1,5 @@
 
 let mouseDown = false
-
 document.body.addEventListener("mousedown", () => mouseDown = true);
 document.body.addEventListener("mouseup", () => mouseDown = false);
 
@@ -43,7 +42,6 @@ function createGrid(size) {
     }
 
     createColorBlockEvent("white");
-
 }
 
 function clearGrid() {
@@ -54,23 +52,19 @@ function clearGrid() {
 }
 
 createGrid(20);
+
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
+rainbowBtn = document.querySelector("#rainbow-btn");
+clearBtn = document.querySelector("#clear-btn");
+whiteBtn = document.querySelector("#white-btn");
+
 sliderCount.innerText = `${slider.value} X ${slider.value}`;
 
-slider.addEventListener("change", () => {
-    createGrid(slider.value);
-});
-
-slider.addEventListener("input", () => {
-    sliderCount.innerText = `${slider.value} X ${slider.value}`;
-})
-
-rainbowBtn = document.querySelector("#rainbow-btn");
+slider.addEventListener("change", () => {createGrid(slider.value);});
+slider.addEventListener("input", () => {sliderCount.innerText = `${slider.value} X ${slider.value}`;})
 rainbowBtn.addEventListener("click", createRainbowBlockEvent);
-
-clearBtn = document.querySelector("#clear-btn");
 clearBtn.addEventListener("click", clearGrid);
-
-whiteBtn = document.querySelector("#white-btn");
 whiteBtn.addEventListener('click', () => createColorBlockEvent('white'));
+
+
