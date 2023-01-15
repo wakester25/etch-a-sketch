@@ -12,6 +12,16 @@
 
 #controls-container {
     display: flex;
+    margin-bottom: 30px;
+}
+
+#title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#rainbow-btn, #clear-btn, #white-btn{
+    width: 75px;
 }
 
 .grid-block {
@@ -25,6 +35,7 @@
     padding: 0;
 }
 
-#rainbow-gtn, #clear-btn{
-    margin: 5px;
+.control-item {
+    margin-right: 12px;
+    margin-left: 12px;
 }
