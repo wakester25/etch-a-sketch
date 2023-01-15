@@ -57,10 +57,14 @@ createGrid(16);
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
 sliderCount.innerText = `${slider.value} X ${slider.value}`;
+
 slider.addEventListener("change", () => {
     createGrid(slider.value);
-    sliderCount.innerText = `${slider.value} X ${slider.value}`;
 });
+
+slider.addEventListener("input", () => {
+    sliderCount.innerText = `${slider.value} X ${slider.value}`;
+})
 
 rainbowBtn = document.querySelector("#rainbow-btn");
 rainbowBtn.addEventListener("click", createRainbowBlockEvent);
