@@ -57,7 +57,7 @@ createGrid(16);
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
 sliderCount.innerText = `${slider.value} X ${slider.value}`;
-slider.addEventListener("input", () => {
+slider.addEventListener("change", () => {
     createGrid(slider.value);
     sliderCount.innerText = `${slider.value} X ${slider.value}`;
 });
