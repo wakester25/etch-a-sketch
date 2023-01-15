@@ -1,9 +1,18 @@
 
+#parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #grid-container {
     display: flex;
     flex-wrap: wrap;
 }
 
+#controls-container {
+    display: flex;
+}
 
 .grid-block {
     background-color: black;
