@@ -1,4 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@500&display=swap');
+
+body {
+    font-family: 'Bebas Neue', cursive;
+}
+
 #parent-container {
     display: flex;
     flex-direction: column;
@@ -18,10 +24,18 @@
 #title {
     margin-top: 50px;
     margin-bottom: 30px;
+    font-size: 60px;
 }
 
 #rainbow-btn, #clear-btn, #white-btn{
     width: 75px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px;
+    background-color: black;
+    border-color: aqua;
+    border-radius: 12px;
+    border-width: medium;
+    color: white;
 }
 
 .grid-block {

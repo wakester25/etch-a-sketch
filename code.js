@@ -53,7 +53,7 @@ function clearGrid() {
     });
 }
 
-createGrid(16);
+createGrid(20);
 slider = document.querySelector("#slider");
 sliderCount = document.querySelector("#slider-count");
 sliderCount.innerText = `${slider.value} X ${slider.value}`;
