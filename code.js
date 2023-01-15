@@ -71,3 +71,6 @@ rainbowBtn.addEventListener("click", createRainbowBlockEvent);
 
 clearBtn = document.querySelector("#clear-btn");
 clearBtn.addEventListener("click", clearGrid);
+
+whiteBtn = document.querySelector("#white-btn");
+whiteBtn.addEventListener('click', () => createColorBlockEvent('white'));
